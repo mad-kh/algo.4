@@ -1,0 +1,55 @@
+ALGORITHM insertion
+
+VAR
+
+tab : array_of integer [N];
+i,j,k : integer;
+
+begin
+read(N);
+for i from O to N-1 do
+read(tab[i]);
+end_for
+j:=2
+while j<=tab.length  do 
+  i:=j-1
+  k:=t[j]
+  while i>0 and  t[i]>k do 
+    t[i+1]:=t[i];
+    i:=i-1;
+end_while
+  t[i+1]:=k;
+  j:=j+1;
+end_while
+
+END.
+///////////////
+ALGORITHM selection
+
+VAR
+
+tab : array_of integer [N];
+i,j,k : integer;
+
+begin
+read(N);
+for i from O to N-1 do
+read(tab[i]);
+end_for
+
+i:=1
+tant que i<tab.length do   
+  j:=i+1
+  min:=i
+  while j <= tab.length do  
+    if tab[j]<tab[min] then
+      min:=j;
+end_if   
+ j←j+1
+end_while  
+if min<>i then
+    swap (tab[i] , tab[min])
+  end_if
+  i:=i+1
+end_while
+end.
